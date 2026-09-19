@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.W.W Robiya.com</title>
+    <link rel="stylesheet" href="/css/2.css">
+</head>
+<body>
+
+  <header>
+ <nav class="nave">
+  <p class="logo">pixel<spen class="forge">Forge</spen></p>
+        <a href="hom.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="cannect.html">Contact</a>
+        <button>Get Quite</button>
+</nav>
+<div class="benar">
+  <div class="box">
+    <h1>PixelForge Studio</h1>
+    <p>We design and build websites that help businesses grow online.</p>
+  </div>
+</div>
+</header>
+<section class="contoc">
+<div class="contact-container">
+    <h2>যোগাযোগ করুন</h2>
+    
+    <form id="whatsappForm">
+      <div class="form-group">
+        <label for="name">নাম</label>
+        <input type="text" id="name" placeholder="আপনার নাম লিখুন" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">ইমেইল</label>
+        <input type="email" id="email" placeholder="আপনার ইমেইল লিখুন" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">বার্তা</label>
+        <textarea id="message" rows="4" placeholder="subject and giv me your phon number..." required></textarea>
+      </div>
+      <div class="bok">
+        <button type="submit" class="butto">হোয়াটসঅ্যাপে পাঠান</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // ফর্ম যেন রিলোড না হয়
+
+    const phoneNumber = "8801913266964"; // তোমার WhatsApp নাম্বার (0 বাদ দিয়ে)
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (!name || !email || !message) {
+      alert("সবগুলো ফিল্ড পূরণ করুন!");
+      return;
+    }
+
+    // মেসেজ ফরম্যাট
+    let fullMessage = `হ্যালো, ওয়েবসাইট থেকে নতুন মেসেজ:\n\n`;
+    fullMessage += `*নাম:* ${name}\n`;
+    fullMessage += `*ইমেইল:* ${email}\n`;
+    fullMessage += `*বার্তা:* ${message}`;
+
+    // এনকোড করে URL বানানো
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+
+    // নতুন ট্যাবে ওপেন
+    window.open(whatsappURL, '_blank');
+  });
+</script>
+
+</body>
