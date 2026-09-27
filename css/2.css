@@ -1,9 +1,9 @@
- 
- @import "tailwindcss";
  * {
-    margin:0px;
-    padding:0px;
- }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
  body{
     background-color: rgb(228, 228, 243);
  }
@@ -30,7 +30,7 @@
     border-radius: 5px;
 }
 .benar {
-    background-image: linear-gradient(rgba(20,15,12,0.65)),url(imn.jpg);
+    background-image: linear-gradient(rgba(20,15,12,0.65)),url(/assets/imn.jpg);
     height: 40vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -144,6 +144,8 @@ footer a {
     align-items: center;
     margin: 30px auto;
     width: 700px;
+    
+
 }
     .search-container form {
     display: flex;
@@ -181,7 +183,7 @@ footer a {
     background-color: #357ae8;
 }
 .home {
-    background-image: linear-gradient(rgba(20,15,12,0.65)),url(disply.jpg);
+    background-image: linear-gradient(rgba(20,15,12,0.65)),url(/assets/disply.jpg);
 }
 .benars {
     height: 40vh;
