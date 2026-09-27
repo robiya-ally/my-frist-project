@@ -183,7 +183,7 @@ footer a {
     background-color: #357ae8;
 }
 .home {
-    background-image: linear-gradient(rgba(20,15,12,0.65)),url(/assets/disply.jpg);
+    background-image: linear-gradient(rgba(20,15,12,0.65)),url(./assets/disply.jpg);
 }
 .benars {
     height: 40vh;
