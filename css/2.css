@@ -30,7 +30,7 @@
     border-radius: 5px;
 }
 .benar {
-    background-image: linear-gradient(rgba(20,15,12,0.65)),url(/assets/imn.jpg);
+    background-image: linear-gradient(rgba(20,15,12,0.65)),url(./assets/imn.jpg);
     height: 40vh;
     background-repeat: no-repeat;
     background-position: center;
